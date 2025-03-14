@@ -95,3 +95,20 @@ def error_spotter(): #are we going to have a the list or element as a parameter?
    
             
 error_spotter()
+
+
+data_names = ["Wofai", "Zainab", "A4atullah", 3.5, "Ab99aa"]
+errors= []
+
+def error_spotter(data_names): #are we going to have a the list or element as a parameter? can we have a list as a parameter?
+    """
+    Code for possible errors in the names generated listed in `data_names`.
+    
+    If a name contains any non-alphabetic character, it prints a message 
+    identifying the name as having a foreign value.
+    """
+    for name in data_names:
+        for letter in name:
+            if not letter.isalpha():
+
+error_spotter(data_names)

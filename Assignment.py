@@ -1,4 +1,4 @@
-"""def first_name(my_first_name:str):
+def first_name(my_first_name:str):
     return(my_first_name)
 
 def last_name(my_last_name:str):
@@ -7,10 +7,10 @@ def last_name(my_last_name:str):
 def fullname(my_first_name, my_last_name):
     return f"My full name is {first_name(my_first_name)} {last_name(my_last_name)}"
 
-print(fullname("Mahmud", "Amatullah"))"""
+print(fullname("Mahmud", "Amatullah"))
 
 
-"""attribute_list = ["first name", "last_name", "date of birth"]
+attribute_list = ["first name", "last_name", "date of birth"]
 converted_value = []
 for attribute in attribute_list:
     #for each_letter in attribute:
@@ -19,9 +19,9 @@ for attribute in attribute_list:
         converted_value.append(attribute.replace(" ", "_"))
     else:
         converted_value.append(attribute)
-print(converted_value)"""
+print(converted_value)
 
-"""attribute_list = ["first name", "last_name", "date of birth"]
+attribute_list = ["first name", "last_name", "date of birth"]
 converted_value = []
 
 for attribute in attribute_list:
@@ -29,13 +29,13 @@ for attribute in attribute_list:
         converted_value.append(attribute.replace(" ", "_"))
     else:
         converted_value.append(attribute)
-print(converted_value)"""
+print(converted_value)
 
 
            
 #print("My name is", each_letter), #We need to understand why this is showing the last letter in the index
 
-"""names = ["Mayowa", "chizoba", "Chigozie"]
+names = ["Mayowa", "chizoba", "Chigozie"]
 new_list = []
 
 for name in names:
@@ -44,7 +44,7 @@ for name in names:
     elif name[0].isupper() and not name.endswith("a"):
         new_list.append(name[:-1] + "a") #we cannot use the replace method because we are assuming we do not know the last letter
 
-print(new_list)"""
+print(new_list)
 
 """names = ["Mayowa", "chizoba", "Chigozie"]
 print(names[:-1])"""
@@ -61,3 +61,13 @@ def error_spotter(): #are we going to have a the list or element as a parameter?
    
             
 error_spotter()
+
+names = ["Wofai", "Zainab", "A4atullah", 3.5, "Ab99aa"]
+def filter_bad_names(names):
+    for name in names:
+        for letter in name:
+            if not letter.isalpha():
+                yield name
+
+bad_names = list(filter_bad_names("Wofai", "Zainab", "A4atullah", 3.5, "Ab99aa"))
+print(bad_names)
